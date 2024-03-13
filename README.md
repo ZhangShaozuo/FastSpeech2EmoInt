@@ -1,7 +1,8 @@
 # ProEmo - Instruction Manual
 
 This is the implementation of the paper "Prompt-Driven Text-to-Speech Synthesis Based on Emotion & Intensity Control"
-This repository is credited to the other two repos
+
+Credited to [Comprehensive-TTS](https://github.com/keonlee9420/Comprehensive-Transformer-TTS.git) and [Relative Attribute](https://github.com/chaitanya100100/Relative-Attributes-Zero-Shot-Learning.git)
 
 ## Sample Audios
 
