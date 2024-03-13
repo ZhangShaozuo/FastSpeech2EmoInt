@@ -1,0 +1,13 @@
+File naming convention
+
+Each of the 1440 files has a unique filename. The filename consists of a 4-part numerical identifier (e.g., 0012_Angry_0_Daft-Exprt.wav).
+
+Filename identifiers: 
+
+Speaker ID (0011,0012, ..., 0020).
+
+Emotion (Angry, Happy, Sad, Surprise)
+
+Text ID (0, 1, 2, 4)
+
+Model (FS2_wEI-G&L, FS2_wEI-L, FS2_wEI-None, Daft-Exprt)
