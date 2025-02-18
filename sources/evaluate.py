@@ -8,6 +8,7 @@ from model import CompTransTTSLoss
 from model.loss import CompTransTTSLossOutput
 from dataset import Dataset
 
+'''This script is used to evaluate the model on the validation set during training.'''
 def get_INT_Level(eval_threshold, emt_true, int_list):
     assert len(emt_true) == len(int_list)
     pred2lvl = []

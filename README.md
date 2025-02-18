@@ -1,6 +1,6 @@
-# ProEmo - Instruction Manual
+# Instruction Manual
 
-This is the implementation of the paper "Prompt-Driven Text-to-Speech Synthesis Based on Emotion & Intensity Control"
+This is the implementation of the paper "Emotion and Intensity Regulated Text-to-Speech Synthesis Through Prompt Guidance"
 
 Credited to [Comprehensive-TTS](https://github.com/keonlee9420/Comprehensive-Transformer-TTS.git) and [Relative Attribute](https://github.com/chaitanya100100/Relative-Attributes-Zero-Shot-Learning.git)
 
@@ -106,7 +106,7 @@ val_mos.txt, val_bws.txt is free-form any input text, while val_prompt_unsup.txt
 python subjective_eval.py --source Audio_Data/preprocessed_data/ESD_unsup/val_prompt_unsup.txt --restore_step 450000 --mode batch --checkpoint ESD --label intensity
 ```
 
-## TODO
+## TODO Notes 2025
 
 1. generate_embeds.py: Test scripts that only loads the encoder models, instead of the entire TTS model.
 2. evaluation: clarify the explanation

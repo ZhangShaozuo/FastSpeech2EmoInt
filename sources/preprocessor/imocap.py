@@ -9,6 +9,7 @@ from tqdm import tqdm
 
 from text import _clean_text
 
+'''IMOCap dataset is investigated in this script, though not used in training'''
 def extract_labels(emotion_dict):
     for k, v in emotion_dict.items():
         ## check if all elements in value are unique

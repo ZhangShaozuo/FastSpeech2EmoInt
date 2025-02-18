@@ -15,6 +15,7 @@ from utils.model import get_model, get_vocoder
 from utils.tools import get_configs_of, synth_samples, batch2device
 from utils.eval_utils import (MCD, WER, ACC, Prompt_GPT, preprocess_english)
 
+'''Synthesize the audio samples and compute the evaluation metrics'''
 
 device_id = 1
 device = torch.device(f"cuda:{device_id}")

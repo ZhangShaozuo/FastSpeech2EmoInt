@@ -14,8 +14,10 @@ from transformers import AutoConfig
 from transformers.file_utils import ModelOutput
 from .Classifier import HubertForSpeechClassification
 
+
 @dataclass
 class CompTransTTSOutput(ModelOutput):
+    ''' Model output for CompTransTTS, easily accessible by key|index '''
     output: Optional[torch.FloatTensor] = None
     postnet_output: Optional[torch.FloatTensor] = None
     p_predictions: Optional[torch.FloatTensor] = None

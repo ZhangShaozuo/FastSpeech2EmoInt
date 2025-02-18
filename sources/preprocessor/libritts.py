@@ -11,6 +11,7 @@ from text import _clean_text
 
         
 def prepare_align(config):
+    '''train|val is pre-defined in the dataset release'''
     in_dir = config["path"]["corpus_path"]
     out_dir = config["path"]["raw_path"]
     side_out_dir = config["path"]["preprocessed_path"]

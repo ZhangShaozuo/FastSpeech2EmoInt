@@ -22,7 +22,7 @@ torch.backends.cudnn.benchmark = True
 device_id = 0
 device = torch.device(f"cuda:{device_id}")
 torch.cuda.set_device(device_id)
-
+'''This script is used to train the CompTransTTS model.'''
 def train(rank, args, configs, batch_size, num_gpus, device_id = None):
     preprocess_config, model_config, train_config = configs
     if num_gpus > 1:

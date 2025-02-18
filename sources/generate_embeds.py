@@ -20,6 +20,7 @@ torch.cuda.set_device(device_id)
 # INTENSITY_COL = 'IntensityLabel'
 # eval_thold = {'Angry': 65.1, 'Happy': 77.5, 'Sad': 64.7, 'Surprise': 77.8}
 
+'''Generate embeddings for the validation set, used for t-SNE vis | Inference'''
 def generate_embeds(device, model, args, loader, result_path):
     # preprocess_config, model_config, train_config = configs
     bar = tqdm(total=len(loader))

@@ -1,15 +1,14 @@
-I want you to act as an speech emotion conversion model that can convert neutral samples to 
-emotional ones. I will give you speech transcription and target emotion and you will reply with the prosodic feature change. Here are the details:
-1. Prosodic features involve three types: picth, energy and duration. 
+I want you to act as a speech-emotion conversion model that can convert neutral samples to emotional ones. I will give you speech transcription and target emotion, and you will reply with the prosodic feature change. Here are the details:
+1. Prosodic features involve three types: pitch, energy and duration. 
 The target emotion domain is (Happy, Angry, Sad, Surprise). 
-2. Your response should include changes in prododic features at two levels:
-a. Utterance-level: suggest how to alter prosodic feature for the entire utterance. The goal is to set a baseline for the overall emotional tone. 
-You can increase or decrease these values as long as they don't break the natrualness of the utterance.
-Suggest how much to change them in integer ratings. The range for pitch and energy change is (-5,5), the range for duration change is (-2,2). 
-A positive value for duration means a slower speaking rate, a negative value means a faster speaking rate. You should select these values appropriately given either the target style or the dialogue context. These values should not be used to emphasise specific words in the sentence.
+2. Your response should include changes in prosodic features at two levels:
+a. Utterance-level: suggest how to alter prosodic features for the entire utterance. The goal is to set a baseline for the overall emotional tone. 
+You can increase or decrease these values as long as they do not break the natrualness of the utterance.
+Suggest how much to change them in integer ratings. The pitch and energy change range is (-5,5), and the range for duration change is (-2,2). 
+A positive value for duration means a slower speaking rate, and a negative value means a faster one. Given the target style or the dialogue context, you should select these values appropriately appropriately. These values should not be used to emphasize specific words in the sentence.
 
-b. Word-level: suggest how to alter prosodic feature for each word in the utterance. The goal is to further fine-tune this emotional tone
-The range for pitch and energy change is (-5,5), the range for duration change is (-2,2). Your ratings should enhance the emotion effect by emphasizing specific words.
+b. Word-level: Suggest how to alter prosodic features for each word in the utterance. The goal is to fine-tune this emotional tone further.
+The pitch and energy change range is (-5,5), and the range for duration change is (-2,2). Your ratings should enhance the emotional effect by emphasizing specific words.
 
 3. Your reply should strictly follow the format below:
 Provide your utterance-level changes in a table like the one below:
@@ -24,8 +23,8 @@ Provide your word-level changes in a table like the one below:
 | word 2 | pitch change value for word 2 | energy change value for word 2 | duration change value for word 2 |
 | ... |  |  |  |
 **4. Important guidelines**
-For utterance-level changes, there are many valid combinations of prosodic feature changes while retaining the naturalness, do not restrict yourself in one certain pattern. 
-For word-level changes, think about which words are important in conveying the target emotion then evaluate how important they are using your common sense knowlegde, then you give the ratings. Thus, you can draw the conclusion that most non-important words should probably have value of 0.
-Specifically I want to mention that for **duration**, it is not proper to natively increase the pace for positive sentiment, or decrease the pace for negative sentiment. One example is that we can always drag a word to express your happiness. 
-These guidelines are not all aspects to think, please think carefully before giving responses. 
-When I give you multiple tasks, you should think and reply with it indendently. For example, when you are working on task A, I want to to clean all memories of other tasks you've done and do not let them affect your decision for task A.
+For utterance-level changes, there are many valid combinations of prosodic feature changes while retaining the naturalness; do not restrict yourself to one certain pattern. 
+For word-level changes, think about which words are important in conveying the target emotion, then evaluate how important they are using your common sense knowledge, then you give the ratings. Thus, you can draw the conclusion that most non-important words should probably have value of 0.
+Specifically, I want to mention that for **duration**, it is not proper to natively increase the pace for positive sentiment, or decrease the pace for negative sentiment. One example is that we can always drag a word to express your happiness. 
+These guidelines are not all aspects to think about; please think carefully before giving responses. 
+When I give you multiple tasks, you should think and reply independently. For example, when you are working on task A, I want to to clean all memories of other tasks you've done and not let them affect your decision for task A.

@@ -11,9 +11,6 @@ from text import _clean_text
 def prepare_align(config):
     in_dir = config["path"]["corpus_path"]
     out_dir = config["path"]["raw_path"]
-    # wav_tag = config["path"]["wav_tag"]
-    # txt_dir = os.path.join(in_dir, config["path"]["txt_dir"])
-    # wav_dir = os.path.join(in_dir, config["path"]["wav_dir"])
     sampling_rate = config["preprocessing"]["audio"]["sampling_rate"]
     max_wav_value = config["preprocessing"]["audio"]["max_wav_value"]
     cleaners = config["preprocessing"]["text"]["text_cleaners"]
@@ -35,9 +32,12 @@ def prepare_align(config):
                     # if not wav_name.endswith('.wav'):
                     #     ### remove this file
                     #     os.system(f'rm {os.path.join(e_path, wav_name)}')
+
+                    '''remove all files in the directory'''
                     if os.path.isdir(os.path.join(e_path, wav_name)):
                         ### remove this dir
                         os.system(f'rm -r {os.path.join(e_path, wav_name)}')
+                    '''re-generate the wav file'''
                     # if wav_name.endswith('.wav'):
                     #     wav_path = os.path.join(e_path, wav_name)
                     #     wav, _ = librosa.load(wav_path, sampling_rate)

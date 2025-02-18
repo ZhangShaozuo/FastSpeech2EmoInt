@@ -6,6 +6,7 @@ from model import CompTransTTS, ScheduledOptim
 from speechbrain.pretrained import HIFIGAN
 from transformers import SpeechT5HifiGan
 
+'''This script is used to get the model and vocoder for training and inference.'''
 def get_model(args, configs, device, train=False, emt_labels=False, int_labels=False):
     (preprocess_config, model_config, train_config) = configs
 

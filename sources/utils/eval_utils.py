@@ -18,6 +18,7 @@ from string import punctuation
 from text import text_to_sequence
 from sklearn.metrics import classification_report
 
+'''Include all metrics calculation; systematically usage remains to be updated'''
 def generate_val_OBJ(train_txt, val_txt, out_txt):
     lines = []
     raw_text = []
@@ -182,8 +183,7 @@ class Prompt_GPT():
         # openai.api_type = "azure"
         # openai.api_base = "https://research2.openai.azure.com/"
         # openai.api_version = "2023-03-15-preview"
-        # openai.api_key = "dc66a8a405a245c3a2325fa3bee682b9"
-        self.client = OpenAI(api_key="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")
+        self.client = OpenAI(api_key="Your keys")
         self.prompt = open("prompt.txt").read()
         self.device = device
         self.preprocess_config = preprocess_config

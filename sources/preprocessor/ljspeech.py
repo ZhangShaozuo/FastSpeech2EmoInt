@@ -9,6 +9,7 @@ from text import _clean_text
 
 
 def prepare_align(config):
+    '''LJSpeech is used in Daft-Exprt training'''
     in_dir = config["path"]["corpus_path"]
     out_dir = config["path"]["raw_path"]
     sampling_rate = config["preprocessing"]["audio"]["sampling_rate"]

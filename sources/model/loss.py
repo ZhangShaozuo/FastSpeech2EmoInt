@@ -12,6 +12,7 @@ from transformers.file_utils import ModelOutput
 
 @dataclass
 class CompTransTTSLossOutput(ModelOutput):
+    ''' Model output for CompTransTTSLoss, easily accessible by key|index '''
     total_loss: Optional[torch.FloatTensor] = None
     mel_loss: Optional[torch.FloatTensor] = None
     postnet_mel_loss: Optional[torch.FloatTensor] = None
